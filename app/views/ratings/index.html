@@ -1,0 +1,21 @@
+<h1>All the ratings</h1>
+
+<table>
+
+  <tr>
+    <th>Thing</th>
+    <th>User</th>
+    <th>Good?</th>
+  </tr>
+
+  <% @ratings.each do |r| %>
+
+    <tr>
+      <td><%= r.thing_id %></td>
+      <td><%= r.user_id %></td>
+      <td><%= r.good %></td>
+    </tr>
+
+  <% end %>
+
+</table>

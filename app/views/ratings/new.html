@@ -1,0 +1,22 @@
+<%= form_for :rating, url: ratings_path do |f| %>
+  <p>
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </p>
+  
+  <p>
+    <%= f.label :thing_id %><br>
+    <%= f.text_field :thing_id %>
+  </p>
+ 
+  <p>
+    <%= f.radio_button(:good, true) %>
+    <%= label(:good, 'Good') %>
+    <%= f.radio_button(:good, false) %>
+    <%= label(:bad, 'Bad') %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
